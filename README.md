@@ -1,36 +1,43 @@
-# TypeScript Example
+# Construction Machine Management App
 
-<p>
-  <!-- iOS -->
-  <img alt="Supports Expo iOS" longdesc="Supports Expo iOS" src="https://img.shields.io/badge/iOS-4630EB.svg?style=flat-square&logo=APPLE&labelColor=999999&logoColor=fff" />
-  <!-- Android -->
-  <img alt="Supports Expo Android" longdesc="Supports Expo Android" src="https://img.shields.io/badge/Android-4630EB.svg?style=flat-square&logo=ANDROID&labelColor=A4C639&logoColor=fff" />
-  <!-- Web -->
-  <img alt="Supports Expo Web" longdesc="Supports Expo Web" src="https://img.shields.io/badge/web-4630EB.svg?style=flat-square&logo=GOOGLE-CHROME&labelColor=4285F4&logoColor=fff" />
-</p>
+This is a mobile application developed for Construction Machine Management Inc. to manage their fleet of diverse building machines and streamline the inventory management process. The app allows staff members to easily add, edit, and delete machine types and machines, as well as view and filter machines based on their types.
 
-```sh
-npx create-react-native-app -t with-typescript
-```
+## Table of Contents
 
-TypeScript is a superset of JavaScript which gives you static types and powerful tooling in Visual Studio Code including autocompletion and useful inline warnings for type errors.
+- [Features](#features)
+- [Installation and Setup](#installation-and-setup)
+- [Tech Stack](#tech-stack)
+- [Project Structure](#project-structure)
+- [Future Enhancements](#future-enhancements)
+- [Credits](#credits)
+- [License](#license)
 
-## 🚀 How to use
+## Features
 
-#### Creating a new project
+- **Machine Types Management**: Staff members can add, edit, and delete machine types. Each machine type can have multiple attributes such as weight, power, manufacturing date, etc. Attributes can be of types: date, text, checkbox, or number.
 
-- Install the CLI: `npm i -g expo-cli`
-- Create a project: `npx create-react-native-app -t with-typescript`
-- `cd` into the project
+- **Machine Management**: Staff members can add, edit, and delete machines. Each machine belongs to a specific machine type and has its own set of attributes based on the selected machine type.
 
-### Adding TypeScript to existing projects
+- **Filtering and Sorting**: Staff members can filter machines based on their types to view specific groups of machines. The filters are accessible from a convenient drawer.
 
-- Create a blank TypeScript config: `touch tsconfig.json`
-- Run `yarn start` or `npm run start` to automatically configure TypeScript
-- Rename files to TypeScript, `.tsx` for React components and `.ts` for plain typescript files
+- **User-Friendly Interface**: The app provides a beautiful user interface that is easy to navigate and interact with.
 
-> 💡 You can disable the TypeScript setup in Expo CLI with the environment variable `EXPO_NO_TYPESCRIPT_SETUP=1 expo start`
+- **Persistent Data**: All machine types and machines are saved locally using AsyncStorage, ensuring that data is retained even after page reloads.
 
-## 📝 Notes
+- **Mobile Responsive**: The app is designed to work seamlessly on mobile phones and tablets.
 
-- [Expo TypeScript guide](https://docs.expo.dev/versions/latest/guides/typescript/)
+## Tech Stack
+
+- React Native
+- Redux (State Management)
+- AsyncStorage (Data Persistence)
+- Expo (Development Environment)
+- TypeScript
+
+## Project Structure
+
+- `src/navigation`: Contains the navigation configuration files.
+- `src/redux`: Contains the Redux store, reducers, and action creators.
+- `src/screens`: Contains the screens/components of the app.
+- `src/types`: Contains type definitions used in the app.
+- `App.tsx`: Entry point of the app.
